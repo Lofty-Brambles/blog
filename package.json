@@ -1,0 +1,10 @@
+{
+  "name": "blog",
+  "version": "0.0.1",
+  "description": "My personal blogsite. I experiment with stuff to make it fun.",
+  "scripts": {},
+  "devDependencies": {
+    "@11ty/eleventy": "^2.0.1",
+    "prettier": "^2.8.8"
+  }
+}
