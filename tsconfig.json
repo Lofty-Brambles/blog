@@ -1,0 +1,23 @@
+{
+  "compilerOptions": {
+    "target": "ESNext",
+    "module": "NodeNext",
+    "moduleResolution": "Node",
+
+    "resolveJsonModule": true,
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+
+    "noImplicitReturns": true,
+
+    "strict": true /* Enable all strict type-checking options. */,
+    "useUnknownInCatchVariables": true,
+    "skipLibCheck": false,
+
+    "baseUrl": ".",
+    "paths": {
+      "@scripts/*": ["eleventy_config/src/*"]
+    }
+  }
+}

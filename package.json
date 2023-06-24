@@ -2,9 +2,15 @@
   "name": "blog",
   "version": "0.0.1",
   "description": "My personal blogsite. I experiment with stuff to make it fun.",
-  "scripts": {},
+  "scripts": {
+    "transpile:scripts": "DEV=true node eleventy_config/execute_esbuild.mjs",
+    "build:scripts": "node eleventy_config/execute_esbuild.mjs"
+  },
   "devDependencies": {
     "@11ty/eleventy": "^2.0.1",
-    "prettier": "^2.8.8"
+    "esbuild": "^0.18.7",
+    "prettier": "^2.8.8",
+    "rollup": "^3.25.1",
+    "typescript": "^5.1.3"
   }
 }
