@@ -4,7 +4,9 @@
   "description": "My personal blogsite. I experiment with stuff to make it fun.",
   "scripts": {
     "transpile:scripts": "DEV=true node eleventy_config/execute_esbuild.mjs",
-    "build:scripts": "node eleventy_config/execute_esbuild.mjs"
+    "build:scripts": "node eleventy_config/execute_esbuild.mjs",
+    "transpile:tools": "",
+    "build:tools": ""
   },
   "devDependencies": {
     "@11ty/eleventy": "^2.0.1",

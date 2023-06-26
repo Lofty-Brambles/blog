@@ -1,4 +1,4 @@
-import { build } from "esbuild";
+import { build, context } from "esbuild";
 
 const ELEVENTY_ENTRY = "eleventy_config/src/index.ts";
 const ELEVENTY_OUT_DIR = "eleventy_config/dist";
@@ -12,7 +12,7 @@ const MODE_DECISIONS = process.env.DEV
   ? { sourcemap: "external", minify: false }
   : { minify: true };
 
-await build({
+const config = {
   entryPoints: [ELEVENTY_ENTRY],
   bundle: true,
   platform: PLATFORM,
@@ -21,4 +21,8 @@ await build({
   alias: ALIASES,
   packages: "external",
   ...MODE_DECISIONS,
-});
+};
+
+process.env.MODE === "watch"
+  ? await (await context(config)).watch()
+  : await build(config);
