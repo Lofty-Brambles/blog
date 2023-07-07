@@ -6,3 +6,6 @@ export const PARTIALS_DIR = "components";
 export const LAYOUTS_DIR = "layouts";
 
 export const VALID_EXTENSIONS = ["svelte", "md"];
+
+// these are related to the svelte plugin
+export const DEFAULT_CACHE_DIRECTORY = ".cache/svelte"

@@ -10,15 +10,16 @@ const MODE_DECISIONS = process.env.DEV
   ? { sourcemap: "external", minify: false }
   : { minify: true };
 
-require("esbuild").buildSync({
-  entryPoints: [ELEVENTY_ENTRY],
-  bundle: true,
-  platform: PLATFORM,
-  format: FORMAT,
-  outdir: ELEVENTY_OUT_DIR,
-  alias: ALIASES,
-  packages: "external",
-  ...MODE_DECISIONS,
-});
+if (!require("node:fs").existsSync(`${ELEVENTY_OUT_DIR}/index.js`))
+  require("esbuild").buildSync({
+    entryPoints: [ELEVENTY_ENTRY],
+    bundle: true,
+    platform: PLATFORM,
+    format: FORMAT,
+    outdir: ELEVENTY_OUT_DIR,
+    alias: ALIASES,
+    packages: "external",
+    ...MODE_DECISIONS,
+  });
 
 module.exports = require(`${ELEVENTY_OUT_DIR}/index.js`);
