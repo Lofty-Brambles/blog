@@ -30,3 +30,7 @@
 # 0.0.4
 
 - How to add markdoc pages into svelte? Write a markdoc preprocessor that transpiles into svelte components and render it entirely AS svelte components. Then, use these svelte components compiled down to generate a client-side build.
+
+- Change how svelte components are detected through checking necessary directory via globby, not a special endpoint. This should solve the fs based routing issue.
+
+- 
