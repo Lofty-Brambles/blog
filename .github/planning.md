@@ -16,7 +16,6 @@
 
 - On second thoughts, maybe use Markdoc for html templating in the posts and an astro like boil down at build to make the components. I shouldn't need Nunjucks there, and it can use the component format mentioned above.
 
-
 # 0.0.3
 
 - We want a `/app` directory to contain our website. This will do a nested route based page routing.
@@ -28,3 +27,6 @@
 
 - These components can be svelte components and can accept a kit-like SSR script along with the component. These are supposed to be SSR-ed and the contents to be hydrated into the page. Language tools are to be developed for these
 
+# 0.0.4
+
+- How to add markdoc pages into svelte? Write a markdoc preprocessor that transpiles into svelte components and render it entirely AS svelte components. Then, use these svelte components compiled down to generate a client-side build.

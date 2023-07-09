@@ -19,5 +19,6 @@
     "paths": {
       "@scripts/*": ["eleventy_config/src/*"]
     }
-  }
+  },
+  "exclude": ["node_modules/*"]
 }

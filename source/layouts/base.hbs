@@ -1,0 +1,16 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    {{{ content.head }}}
+    <style>
+      {{{ content.css }}}
+    </style>
+  </head>
+  <body id="primary_entry">
+    {{{ content }}}
+  </body>
+  <script>
+    {{{ svelte_data dataFn }}}
+  </script>
+  {{{ svelte_client "primary_entry" }}}
+</html>

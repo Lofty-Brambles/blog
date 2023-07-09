@@ -5,7 +5,10 @@ export const OUTPUT_DIR = "dist";
 export const PARTIALS_DIR = "components";
 export const LAYOUTS_DIR = "layouts";
 
-export const VALID_EXTENSIONS = ["svelte", "md"];
+export const VALID_EXTENSIONS = ["page.svelte", "md"];
+export const SVELTE_TEST = /\.page.svelte$/;
+export const SVELTE_GLOB_TEST = "**/*.page.svelte";
 
 // these are related to the svelte plugin
-export const DEFAULT_CACHE_DIRECTORY = ".cache/svelte"
+export const DEFAULT_ASSETS = ".assets";
+export const DEFAULT_CLIENTS = "client";

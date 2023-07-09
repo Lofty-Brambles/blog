@@ -3,8 +3,6 @@
   "version": "0.0.1",
   "description": "My personal blogsite. I experiment with stuff to make it fun.",
   "scripts": {
-    "transpile:scripts": "DEV=true node eleventy_config/execute_esbuild.mjs",
-    "build:scripts": "node eleventy_config/execute_esbuild.mjs",
     "transpile:tools": "",
     "build:tools": ""
   },
@@ -12,7 +10,6 @@
     "@11ty/eleventy": "^2.0.1",
     "@rollup/plugin-node-resolve": "^15.1.0",
     "@types/node": "^20.3.2",
-    "esbuild": "^0.18.7",
     "globby": "^13.2.0",
     "prettier": "^2.8.8",
     "rollup": "^3.25.1",
